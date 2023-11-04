@@ -1,4 +1,4 @@
-import pandas as pandas
+import pandas as pd
 import sys
 
 def merge_csv(key, path1, path2, pathoutput):
