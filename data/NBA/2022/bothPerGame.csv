@@ -1,4 +1,4 @@
-Rk,Player,Pos,Age,Tm,G,GS,MP,FG,FGA,FG%,3P,3PA,3P%,2P,2PA,2P%,eFG%,FT,FTA,FT%,ORB,DRB,TRB,AST,STL,BLK,TOV,PF,PTS-Playoffs,Player-additional,PTS-Regular
+Rk,Player,Pos,Age,Tm,G,GS,MP,FG,FGA,FG%,3P,3PA,3P%,2P,2PA,2P%,eFG%,FT,FTA,FT%,ORB,DRB,TRB,AST,STL,BLK,TOV,PF,PtsP,Player-additional,PtsR
 1,Joel Embiid,C,28,PHI,66,66,34.6,11.0,20.1,.548,1.0,3.0,.330,10.0,17.1,.587,.573,10.0,11.7,.857,1.7,8.4,10.2,4.2,1.0,1.7,3.4,3.1,33.7,embiijo01,33.1
 2,Luka Dončić,PG,23,DAL,66,66,36.2,10.9,22.0,.496,2.8,8.2,.342,8.1,13.8,.588,.560,7.8,10.5,.742,0.8,7.8,8.6,8.0,1.4,0.5,3.6,2.5,31.6,doncilu01,32.4
 3,Damian Lillard,PG,32,POR,58,58,36.3,9.6,20.7,.463,4.2,11.3,.371,5.4,9.4,.574,.564,8.8,9.6,.914,0.8,4.0,4.8,7.3,0.9,0.3,3.3,1.9,30.5,lillada01,32.2
