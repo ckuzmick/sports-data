@@ -1,0 +1,35 @@
+#!/usr/bin/env node
+
+const fs = require('fs');
+const Papa = require('papaparse');
+const _ = require('lodash');
+
+function mergeCSV(key, path1, path2, pathOutput) {
+    const csv1 = fs.readFileSync(path1, 'utf8');
+    const csv2 = fs.readFileSync(path2, 'utf8');
+
+    const data1 = Papa.parse(csv1, { header: true }).data;
+    const data2 = Papa.parse(csv2, { header: true }).data;
+
+    const mergedData = _.mergeWith(data1, data2, (objValue, srcValue) => {
+        if (_.isArray(objValue)) {
+            return objValue.concat(srcValue);
+        }
+    });
+
+    const mergedCSV = Papa.unparse(mergedData);
+    fs.writeFileSync(pathOutput, mergedCSV);
+    console.log(`${path1} and ${path2} merged into ${pathOutput} based on column ${key}`);
+}
+
+if (process.argv.length !== 6) {
+    console.log("Usage: node merge_csv.js key file1.csv file2.csv output.csv");
+    process.exit(1);
+}
+
+const keyColumn = process.argv[2];
+const file1 = process.argv[3];
+const file2 = process.argv[4];
+const outputFile = process.argv[5];
+
+mergeCSV(keyColumn, file1, file2, outputFile);
