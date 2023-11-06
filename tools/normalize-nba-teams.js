@@ -4,24 +4,23 @@ const fs = require('fs');
 const Papa = require('papaparse');
 const _ = require('lodash');
 
+const teams = [
+    {
+        "start": "Boston Celtics",
+        "end": "Boston"
+    }
+]
+
 function normalizeTeams(path, pathOutput) {
     const csv = fs.readFileSync(path, "utf8");
     const data = Papa.parse(csv, { header: true }).data;
 
-    const normalizedData = _.mergeWith(data, (row) => {
-        const data = 
-        _.replace(data, 'Los Angeles Lakers', 'Los Angeles')
-        _.replace(data, 'Los Angeles Clippers', 'Los Angeles')
-        _.replace(data, 'Boston Celtics', 'Boston')
-        _.replace(data, 'Minnesota Timberwolves', 'Minnesota')
-        _.replace(data, 'New York Knicks', 'New York')
-        _.replace(data, 'New York Nets', 'New York')
-        _.replace(data, 'Golden State Warriors', 'San Francisco')
-        _.replace(data, 'Miami Heat', 'Miami')
-        _.replace(data, 'Boston Celtics', 'Boston')
-        _.replace(data, 'Boston Celtics', 'Boston')
-        _.replace(data, 'Boston Celtics', 'Boston')
-        _.replace(data, 'Boston Celtics', 'Boston')
+    const normalizedData = _.map(data, (row) => {
+        for (let i = 0; i < teams.length; i++) {
+            _.replace(data, teams, 'stuff')
+            return data
+        };
+        return data
     });
 
     const normalizedCSV = Papa.unparse(normalizedData);
