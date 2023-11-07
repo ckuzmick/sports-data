@@ -1,0 +1,296 @@
+#!/usr/bin/env node
+
+const fs = require('fs');
+const Papa = require('papaparse');
+const _ = require('lodash');
+const yargs = require('yargs/yargs')(process.argv.slice(2)).argv;
+
+const leagues = {
+    "NBA": [
+        {
+            "start": "Atlanta Hawks",
+            "end": "Atlanta"
+        },
+        {
+            "start": "Boston Celtics",
+            "end": "Boston"
+        },
+        {
+            "start": "Brooklyn Nets",
+            "end": "New York City"
+        },
+        {
+            "start": "Charlotte Hornets",
+            "end": "Charlotte"
+        },
+        {
+            "start": "Chicago Bulls",
+            "end": "Chicago"
+        },
+        {
+            "start": "Cleveland Cavaliers",
+            "end": "Cleveland"
+        },
+        {
+            "start": "Dallas Mavericks",
+            "end": "Dallas"
+        },
+        {
+            "start": "Denver Nuggets",
+            "end": "Denver"
+        },
+        {
+            "start": "Detroit Pistons",
+            "end": "Detroit"
+        },
+        {
+            "start": "Golden State Warriors",
+            "end": "Bay Area"
+        },
+        {
+            "start": "Houston Rockets",
+            "end": "Houston"
+        },
+        {
+            "start": "Indiana Pacers",
+            "end": "Indiana"
+        },
+        {
+            "start": "LA Clippers",
+            "end": "Los Angeles"
+        },
+        {
+            "start": "Los Angeles Lakers",
+            "end": "Los Angeles"
+        },
+        {
+            "start": "Memphis Grizzlies",
+            "end": "Memphis"
+        },
+        {
+            "start": "Miami Heat",
+            "end": "Miami"
+        },
+        {
+            "start": "Milwaukee Bucks",
+            "end": "Milwaukee"
+        },
+        {
+            "start": "Minnesota Timberwolves",
+            "end": "Minnesota"
+        },
+        {
+            "start": "New Orleans Pelicans",
+            "end": "New Orleans"
+        },
+        {
+            "start": "New York Knicks",
+            "end": "New York City"
+        },
+        {
+            "start": "Oklahoma City Thunder",
+            "end": "Oklahoma City"
+        },
+        {
+            "start": "Orlando Magic",
+            "end": "Orlando"
+        },
+        {
+            "start": "Philadelphia 76ers",
+            "end": "Philadelphia"
+        },
+        {
+            "start": "Phoenix Suns",
+            "end": "Phoenix"
+        },
+        {
+            "start": "Portland Trail Blazers",
+            "end": "Portland"
+        },
+        {
+            "start": "Sacramento Kings",
+            "end": "Sacramento"
+        },
+        {
+            "start": "San Antonio Spurs",
+            "end": "San Antonio"
+        },
+        {
+            "start": "Toronto Raptors",
+            "end": "Toronto"
+        },
+        {
+            "start": "Utah Jazz",
+            "end": "Utah"
+        },
+        {
+            "start": "Washington Wizards",
+            "end": "Washington"
+        }
+    ],
+
+    "NFL": [
+        {
+            "start": "Arizona Cardinals",
+            "end": "Arizona"
+        },
+        {
+            "start": "Atlanta Falcons",
+            "end": "Atlanta"
+        },
+        {
+            "start": "Baltimore Ravens",
+            "end": "Baltimore"
+        },
+        {
+            "start": "Buffalo Bills",
+            "end": "Buffalo"
+        },
+        {
+            "start": "Carolina Panthers",
+            "end": "Carolina"
+        },
+        {
+            "start": "Chicago Bears",
+            "end": "Chicago"
+        },
+        {
+            "start": "Cincinnati Bengals",
+            "end": "Cincinnati"
+        },
+        {
+            "start": "Cleveland Browns",
+            "end": "Cleveland"
+        },
+        {
+            "start": "Dallas Cowboys",
+            "end": "Dallas"
+        },
+        {
+            "start": "Denver Broncos",
+            "end": "Denver"
+        },
+        {
+            "start": "Detroit Lions",
+            "end": "Detroit"
+        },
+        {
+            "start": "Green Bay Packers",
+            "end": "Green Bay"
+        },
+        {
+            "start": "Houston Texans",
+            "end": "Houston"
+        },
+        {
+            "start": "Indianapolis Colts",
+            "end": "Indianapolis"
+        },
+        {
+            "start": "Jacksonville Jaguars",
+            "end": "Jacksonville"
+        },
+        {
+            "start": "Kansas City Chiefs",
+            "end": "Kansas City"
+        },
+        {
+            "start": "Las Vegas Raiders",
+            "end": "Las Vegas"
+        },
+        {
+            "start": "Los Angeles Chargers",
+            "end": "Los Angeles"
+        },
+        {
+            "start": "Los Angeles Rams",
+            "end": "Los Angeles"
+        },
+        {
+            "start": "Miami Dolphins",
+            "end": "Miami"
+        },
+        {
+            "start": "Minnesota Vikings",
+            "end": "Minnesota"
+        },
+        {
+            "start": "New England Patriots",
+            "end": "New England"
+        },
+        {
+            "start": "New Orleans Saints",
+            "end": "New Orleans"
+        },
+        {
+            "start": "New York Giants",
+            "end": "New York City"
+        },
+        {
+            "start": "New York Jets",
+            "end": "New York City"
+        },
+        {
+            "start": "Philadelphia Eagles",
+            "end": "Philadelphia"
+        },
+        {
+            "start": "Pittsburgh Steelers",
+            "end": "Pittsburgh"
+        },
+        {
+            "start": "San Francisco 49ers",
+            "end": "San Francisco"
+        },
+        {
+            "start": "Seattle Seahawks",
+            "end": "Seattle"
+        },
+        {
+            "start": "Tampa Bay Buccaneers",
+            "end": "Tampa Bay"
+        },
+        {
+            "start": "Tennessee Titans",
+            "end": "Tennessee"
+        },
+        {
+            "start": "Washington Football Team",
+            "end": "Washington"
+        }
+    ]
+}
+
+function normalizeTeams({ league, column, inputFile, outputFile }) {
+    const teamMappings = leagues[league];
+    if (!teamMappings) {
+        console.log(`Invalid league: ${league}`);
+        process.exit(1);
+    }
+
+    const csv = fs.readFileSync(inputFile, "utf8");
+    const data = Papa.parse(csv, { header: true }).data;
+
+    const normalizedData = data.map((row) => {
+        teamMappings.forEach((team) => {
+            row[column] = _.replace(row[column], team.start, team.end);
+        });
+        return row;
+    });
+
+    const normalizedCSV = Papa.unparse(normalizedData);
+    fs.writeFileSync(outputFile, normalizedCSV);
+    console.log(`Data normalized and saved to ${outputFile}`);
+}
+
+if (process.argv.length !== 10) {
+    console.log("Usage: normalize-teams --league <league> --column <column> --input <input-file> --output <output-file>");
+    process.exit(1);
+}
+
+normalizeTeams({
+    league: yargs.l, 
+    column: yargs.c, 
+    inputFile: yargs.i,
+    outputFile: yargs.o
+});
