@@ -125,7 +125,23 @@ const leagues = {
         },
         {
             "start": "Washington Wizards",
-            "end": "Washington"
+            "end": "D.C."
+        },
+        {
+            "start": "New York Nets",
+            "end": "New York City"
+        },
+        {
+            "start": "Minneapolis Lakers",
+            "end": "Minnesota"
+        },
+        {
+            "start": "Philadelphia Warriors",
+            "end": "Philadelphia"
+        },
+        {
+            "start": "Baltimore Bullets",
+            "end": "Baltimore"
         }
     ],
 
@@ -184,7 +200,7 @@ const leagues = {
         },
         {
             "start": "Indianapolis Colts",
-            "end": "Indianapolis"
+            "end": "Indiana"
         },
         {
             "start": "Jacksonville Jaguars",
@@ -203,6 +219,10 @@ const leagues = {
             "end": "Los Angeles"
         },
         {
+            "start": "Los Angeles Raiders",
+            "end": "Los Angeles"
+        },
+        {
             "start": "Los Angeles Rams",
             "end": "Los Angeles"
         },
@@ -216,7 +236,7 @@ const leagues = {
         },
         {
             "start": "New England Patriots",
-            "end": "New England"
+            "end": "Boston"
         },
         {
             "start": "New Orleans Saints",
@@ -240,7 +260,11 @@ const leagues = {
         },
         {
             "start": "San Francisco 49ers",
-            "end": "San Francisco"
+            "end": "Bay Area"
+        },
+        {
+            "start": "Oakland Raiders",
+            "end": "Bay Area"
         },
         {
             "start": "Seattle Seahawks",
@@ -255,10 +279,20 @@ const leagues = {
             "end": "Tennessee"
         },
         {
-            "start": "Washington Football Team",
-            "end": "Washington"
+            "start": "Washington Commanders",
+            "end": "D.C."
+        },
+        {
+            "start": "Washington Redskins",
+            "end": "D.C."
+        },
+        {
+            "start": "Baltimore Colts",
+            "end": "Baltimore"
         }
     ]
+
+
 }
 
 function normalizeTeams({ league, column, inputFile, outputFile }) {
@@ -283,13 +317,15 @@ function normalizeTeams({ league, column, inputFile, outputFile }) {
     console.log(`Data normalized and saved to ${outputFile}`);
 }
 
-if (process.argv.length !== 10) {
+console.log(yargs, null, 4)
+
+if (process.argv.length !== 9) {
     console.log("Usage: normalize-teams --league <league> --column <column> --input <input-file> --output <output-file>");
     process.exit(1);
 }
 
 normalizeTeams({
-    league: yargs.l, 
+    league: yargs._, 
     column: yargs.c, 
     inputFile: yargs.i,
     outputFile: yargs.o
