@@ -291,8 +291,6 @@ const leagues = {
             "end": "Baltimore"
         }
     ]
-
-
 }
 
 function normalizeTeams({ league, column, inputFile, outputFile }) {

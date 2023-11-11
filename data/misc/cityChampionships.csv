@@ -1,87 +1,144 @@
-Year,League,City,RunnerUp,Finals MVP,,Points,Rebounds,Assists,Win Shares
-2023,NBA,Denver,Miami,N. Jokić,,N. Jokić (600),N. Jokić (269),N. Jokić (190),N. Jokić (5.0)
-2022,NBA,Bay Area,Boston,S. Curry,,J. Tatum (615),A. Horford (214),J. Tatum (148),J. Butler (3.8)
-2021,NBA,Milwaukee,Phoenix,G. Antetokounmpo,,G. Antetokounmpo (634),G. Antetokounmpo (269),J. Holiday (199),G. Antetokounmpo (3.7)
-2020,NBA,Los Angeles,Miami,L. James,,A. Davis (582),L. James (226),L. James (184),A. Davis (4.5)
-2019,NBA,Toronto,Bay Area,K. Leonard,,K. Leonard (732),D. Green (223),D. Green (187),K. Leonard (4.9)
-2018,NBA,Bay Area,Cleveland,K. Durant,,L. James (748),D. Green (222),L. James (198),L. James (5.2)
-2017,NBA,Bay Area,Cleveland,K. Durant,,L. James (591),K. Love (191),L. James (141),L. James (4.3)
-2016,NBA,Cleveland,Bay Area,L. James,,K. Thompson (582),D. Green (228),R. Westbrook (198),L. James (4.7)
-2015,NBA,Bay Area,Cleveland,A. Iguodala,,L. James (601),D. Howard (238),L. James (169),S. Curry (3.9)
-2014,NBA,San Antonio,Miami,K. Leonard,,K. Durant (563),T. Duncan (211),R. Westbrook (153),L. James (4.3)
-2013,NBA,Miami,San Antonio,L. James,,L. James (596),T. Duncan (214),L. James (152),L. James (5.2)
-2012,NBA,Miami,Oklahoma City,L. James,,L. James (697),L. James (224),R. Rondo (227),L. James (5.8)
-2011,NBA,Dallas,Miami,D. Nowitzki,,D. Nowitzki (582),T. Chandler (193),J. Kidd (153),L. James (3.8)
-2010,NBA,Los Angeles,Boston,K. Bryant,,K. Bryant (671),P. Gasol (255),R. Rondo (223),P. Gasol (4.3)
-2009,NBA,Los Angeles,Orlando,K. Bryant,,K. Bryant (695),D. Howard (353),R. Rondo (137),L. James (4.8)
-2008,NBA,Boston,Los Angeles,P. Pierce,,K. Bryant (633),K. Garnett (274),R. Rondo (172),K. Garnett (4.1)
-2007,NBA,San Antonio,Cleveland,T. Parker,,L. James (501),T. Duncan (229),L. James (159),L. James (3.7)
-2006,NBA,Miami,Dallas,D. Wade,,D. Wade (654),D. Nowitzki (268),S. Nash (204),D. Nowitzki (5.4)
-2005,NBA,San Antonio,Detroit,T. Duncan,,T. Duncan (542),T. Duncan (286),S. Nash (170),C. Billups (4.6)
-2004,NBA,Detroit,Los Angeles,C. Billups,,K. Bryant (539),B. Wallace (328),C. Billups (136),S. O'Neal (3.9)
-2003,NBA,San Antonio,New Jersey Nets,T. Duncan,,T. Duncan (593),T. Duncan (369),J. Kidd (163),T. Duncan (5.9)
-2002,NBA,Los Angeles,New Jersey Nets,S. O'Neal,,S. O'Neal (541),S. O'Neal (239),J. Kidd (182),S. O'Neal (3.8)
-2001,NBA,Los Angeles,Philadelphia,S. O'Neal,,A. Iverson (723),D. Mutombo (316),A. Iverson (134),K. Bryant (3.8)
-2000,NBA,Los Angeles,Indiana,S. O'Neal,,S. O'Neal (707),S. O'Neal (355),M. Jackson (178),S. O'Neal (4.7)
-1999,NBA,San Antonio,New York City,T. Duncan,,L. Sprewell (407),T. Duncan (195),A. Johnson (126),T. Duncan (3.7)
-1998,NBA,Chicago,Utah,M. Jordan,,M. Jordan (680),D. Rodman (248),J. Stockton (155),M. Jordan (4.8)
-1997,NBA,Chicago,Utah,M. Jordan,,M. Jordan (590),K. Malone (228),J. Stockton (191),M. Jordan (3.9)
-1996,NBA,Chicago,Seattle SuperSonics,M. Jordan,,M. Jordan (552),D. Rodman (247),J. Stockton (195),M. Jordan (4.7)
-1995,NBA,Houston,Orlando,H. Olajuwon,,H. Olajuwon (725),S. O'Neal (250),A. Hardaway (162),S. O'Neal (3.0)
-1994,NBA,Houston,New York City,H. Olajuwon,,H. Olajuwon (664),P. Ewing (293),J. Stockton (157),H. Olajuwon (4.3)
-1993,NBA,Chicago,Phoenix,M. Jordan,,M. Jordan (666),C. Barkley (326),K. Johnson (182),C. Barkley (4.6)
-1992,NBA,Chicago,Portland,M. Jordan,,M. Jordan (759),H. Grant (194),J. Stockton (217),M. Jordan (4.1)
-1991,NBA,Chicago,Los Angeles,M. Jordan,,M. Jordan (529),D. Rodman (177),M. Johnson (240),M. Jordan (4.8)
-1990,NBA,Detroit,Portland,I. Thomas,,M. Jordan (587),B. Laimbeer (211),K. Johnson (170),M. Jordan (4.0)
-1989,NBA,Detroit,Los Angeles,J. Dumars,,M. Jordan (591),D. Rodman (170),M. Johnson (165),M. Jordan (4.0)
-1988,NBA,Los Angeles,Detroit,J. Worthy,,J. Worthy (506),B. Laimbeer (221),M. Johnson (303),M. Johnson (4.0)
-1987,NBA,Los Angeles,Boston,M. Johnson,,L. Bird (622),L. Bird (231),M. Johnson (219),M. Johnson (3.7)
-1986,NBA,Boston,Houston,L. Bird,,H. Olajuwon (537),H. Olajuwon (236),M. Johnson (211),L. Bird (4.2)
-1985,NBA,Los Angeles,Boston,K. Abdul-Jabbar,,L. Bird (520),R. Parish (219),M. Johnson (289),M. Johnson (3.0)
-1984,NBA,Boston,Los Angeles,L. Bird,,L. Bird (632),L. Bird (252),M. Johnson (284),L. Bird (4.7)
-1983,NBA,Philadelphia,Los Angeles,M. Malone,,K. Abdul-Jabbar (406),M. Malone (206),M. Johnson (192),M. Malone (2.8)
-1982,NBA,Los Angeles,Philadelphia,M. Johnson,,J. Erving (461),C. Jones (189),M. Cheeks (172),J. Erving (3.0)
-1981,NBA,Boston,Houston,C. Maxwell,,M. Malone (562),M. Malone (305),M. Cheeks (116),M. Malone (3.5)
-1980,NBA,Los Angeles,Philadelphia,M. Johnson,,K. Abdul-Jabbar (479),C. Jones (185),M. Johnson (151),K. Abdul-Jabbar (3.3)
-1979,NBA,Seattle,Washington Bullets,D. Johnson,,G. Williams (454),E. Hayes (266),T. Henderson (107),G. Williams (2.7)
-1978,NBA,D.C.,Seattle SuperSonics,W. Unseld,,E. Hayes (457),M. Webster (289),T. Henderson (106),E. Hayes (3.1)
-1977,NBA,Portland,Philadelphia,B. Walton,,J. Erving (518),B. Walton (288),B. Walton (104),J. Erving (3.4)
-1976,NBA,Boston,Phoenix,J. White,,J. White (408),D. Cowens (296),A. Adams (98),D. Cowens (2.7)
-1976,ABA,New York City,Denver,,,J. Erving (451),J. Erving (164),L. Dampier (77),J. Erving (3.7)
-1975,NBA,Bay Area,Washington Bullets,R. Barry,,R. Barry (479),W. Unseld (276),K. Porter (124),R. Barry (3.1)
-1975,ABA,Kentucky,Indiana,,,G. McGinnis (581),G. McGinnis (286),G. McGinnis (148),A. Gilmore (3.0)
-1974,NBA,Boston,Milwaukee,J. Havlicek,,K. Abdul-Jabbar (515),K. Abdul-Jabbar (253),O. Robertson (149),K. Abdul-Jabbar (4.7)
-1974,ABA,New York City,Utah Stars,,,W. Wise (420),G. Govan (246),R. Boone (109),J. Erving (3.0)
-1973,NBA,New York City,Los Angeles,W. Reed,,J. West (401),W. Chamberlain (383),J. West (132),W. Frazier (3.0)
-1973,ABA,Indiana,Kentucky Colonels,,,D. Issel (521),A. Gilmore (260),F. Lewis (91),D. Issel (3.6)
-1972,NBA,Los Angeles,New York City,W. Chamberlain,,W. Frazier (388),W. Chamberlain (315),J. West (134),W. Frazier (3.3)
-1972,ABA,Indiana,New York Nets,,,R. Barry (554),M. Daniels (302),F. Lewis (87),J. Erving (2.8)
-1971,NBA,Milwaukee,Baltimore Bullets,K. Abdul-Jabbar,,E. Monroe (397),W. Unseld (339),O. Robertson (124),K. Abdul-Jabbar (3.3)
-1971,ABA,Utah Stars,Kentucky Colonels,,,D. Issel (534),Z. Beaty (263),L. Dampier (179),D. Issel (3.3)
-1970,NBA,New York City,Los Angeles,W. Reed,,J. West (562),W. Chamberlain (399),W. Frazier (156),J. West (3.2)
-1970,ABA,Indiana,Los Angeles Stars,,,S. Haywood (440),M. Daniels (265),M. Calvin (101),R. Brown (3.5)
-1969,NBA,Boston,Los Angeles,J. West,,J. West (556),W. Chamberlain (444),J. West (135),J. West (4.3)
-1969,ABA,Bay Area,Indiana,,,W. Jabali (460),M. Daniels (237),L. Brown (87),R. Brown (3.4)
-1968,NBA,Boston,Los Angeles,,,J. Havlicek (493),B. Russell (434),J. Havlicek (142),J. West (3.6)
-1968,ABA,Pittsburgh,New Orleans Buccaneers,,,C. Hawkins (419),T. Washington (261),L. Brown (129),C. Hawkins (4.0)
-1967,NBA,Philadelphia,San Francisco Warriors,,,R. Barry (521),W. Chamberlain (437),W. Chamberlain (135),W. Chamberlain (3.8)
-1966,NBA,Boston,Los Angeles,,,J. West (479),B. Russell (428),B. Russell (85),B. Russell (3.2)
-1965,NBA,Boston,Los Angeles,,,J. West (447),B. Russell (302),B. Russell (76),B. Russell (3.3)
-1964,NBA,Boston,San Francisco Warriors,,,W. Chamberlain (416),W. Chamberlain (302),G. Rodgers (90),W. Chamberlain (3.8)
-1963,NBA,Boston,Los Angeles,,,E. Baylor (424),B. Russell (326),B. Cousy (116),B. Russell (2.5)
-1962,NBA,Boston,Los Angeles,,,E. Baylor (502),B. Russell (370),B. Cousy (123),B. Russell (3.6)
-1961,NBA,Boston,St. Louis Hawks,,,E. Baylor (457),B. Russell (299),B. Cousy (91),E. Baylor (2.8)
-1960,NBA,Boston,St. Louis Hawks,,,B. Pettit (365),B. Russell (336),B. Cousy (116),B. Russell (3.0)
-1959,NBA,Boston,Minneapolis Lakers,,,E. Baylor (331),B. Russell (305),B. Cousy (119),F. Ramsey (2.0)
-1958,NBA,St. Louis,Boston,,,C. Hagan (305),B. Russell (221),B. Cousy (82),C. Hagan (2.7)
-1957,NBA,Boston,St. Louis Hawks,,,B. Pettit (298),B. Russell (244),B. Cousy (93),B. Pettit (1.7)
-1956,NBA,Philadelphia,Fort Wayne Pistons,,,P. Arizin (289),N. Johnston (143),G. King (60),P. Arizin (2.2)
-1955,NBA,Syracuse,Fort Wayne Pistons,,,D. Schayes (209),D. Schayes (141),A. Phillip (78),D. Schayes (1.8)
-1954,NBA,Minnesota,Syracuse Nationals,,,G. Mikan (252),G. Mikan (171),S. Martin (60),G. Mikan (3.5)
-1953,NBA,Minnesota,New York City,,,G. Mikan (238),G. Mikan (185),D. McGuire (70),G. Mikan (2.0)
-1952,NBA,Minnesota,New York City,,,G. Mikan (307),G. Mikan (207),D. McGuire (90),G. Mikan (2.4)
-1951,NBA,Rochester,New York City,,,A. Risen (273),A. Risen (196),D. McGuire (78),B. Wanzer (2.7)
-1950,NBA,Minnesota,Syracuse Nationals,,,G. Mikan (376),,J. Pollard (56),G. Mikan (3.7)
-1949,BAA,Minnesota,Washington Capitols,,,G. Mikan (303),,J. Pollard (39),G. Mikan (4.2)
-1948,BAA,Baltimore,Philadelphia Warriors,,,J. Fulks (282),,H. Dallmar (37),C. Simmons (2.5)
-1947,BAA,Philadelphia,Chicago Stags,,,J. Fulks (222),,H. Dallmar (16),J. Fulks (2.3)
+Year,League,City
+2023,NBA,Denver
+2022,NBA,Bay Area
+2021,NBA,Milwaukee
+2020,NBA,Los Angeles
+2019,NBA,Toronto
+2018,NBA,Bay Area
+2017,NBA,Bay Area
+2016,NBA,Cleveland
+2015,NBA,Bay Area
+2014,NBA,San Antonio
+2013,NBA,Miami
+2012,NBA,Miami
+2011,NBA,Dallas
+2010,NBA,Los Angeles
+2009,NBA,Los Angeles
+2008,NBA,Boston
+2007,NBA,San Antonio
+2006,NBA,Miami
+2005,NBA,San Antonio
+2004,NBA,Detroit
+2003,NBA,San Antonio
+2002,NBA,Los Angeles
+2001,NBA,Los Angeles
+2000,NBA,Los Angeles
+1999,NBA,San Antonio
+1998,NBA,Chicago
+1997,NBA,Chicago
+1996,NBA,Chicago
+1995,NBA,Houston
+1994,NBA,Houston
+1993,NBA,Chicago
+1992,NBA,Chicago
+1991,NBA,Chicago
+1990,NBA,Detroit
+1989,NBA,Detroit
+1988,NBA,Los Angeles
+1987,NBA,Los Angeles
+1986,NBA,Boston
+1985,NBA,Los Angeles
+1984,NBA,Boston
+1983,NBA,Philadelphia
+1982,NBA,Los Angeles
+1981,NBA,Boston
+1980,NBA,Los Angeles
+1979,NBA,Seattle
+1978,NBA,D.C.
+1977,NBA,Portland
+1976,NBA,Boston
+1976,ABA,New York City
+1975,NBA,Bay Area
+1975,ABA,Kentucky
+1974,NBA,Boston
+1974,ABA,New York City
+1973,NBA,New York City
+1973,ABA,Indiana
+1972,NBA,Los Angeles
+1972,ABA,Indiana
+1971,NBA,Milwaukee
+1971,ABA,Utah Stars
+1970,NBA,New York City
+1970,ABA,Indiana
+1969,NBA,Boston
+1969,ABA,Bay Area
+1968,NBA,Boston
+1968,ABA,Pittsburgh
+1967,NBA,Philadelphia
+1966,NBA,Boston
+1965,NBA,Boston
+1964,NBA,Boston
+1963,NBA,Boston
+1962,NBA,Boston
+1961,NBA,Boston
+1960,NBA,Boston
+1959,NBA,Boston
+1958,NBA,St. Louis
+1957,NBA,Boston
+1956,NBA,Philadelphia
+1955,NBA,Syracuse
+1954,NBA,Minnesota
+1953,NBA,Minnesota
+1952,NBA,Minnesota
+1951,NBA,Rochester
+1950,NBA,Minnesota
+1949,BAA,Minnesota
+1948,BAA,Baltimore
+1947,BAA,Philadelphia
+2023,NFL,Kansas City
+2022,NFL,Los Angeles
+2021,NFL,Tampa Bay
+2020,NFL,Kansas City
+2019,NFL,Boston
+2018,NFL,Philadelphia
+2017,NFL,Boston
+2016,NFL,Denver
+2015,NFL,Boston
+2014,NFL,Seattle
+2013,NFL,Baltimore
+2012,NFL,New York City
+2011,NFL,Green Bay
+2010,NFL,New Orleans
+2009,NFL,Pittsburgh
+2008,NFL,New York City
+2007,NFL,Indiana
+2006,NFL,Pittsburgh
+2005,NFL,Boston
+2004,NFL,Boston
+2003,NFL,Tampa Bay
+2002,NFL,Boston
+2001,NFL,Baltimore
+2000,NFL,St. Louis
+1999,NFL,Denver
+1998,NFL,Denver
+1997,NFL,Green Bay
+1996,NFL,Dallas
+1995,NFL,Bay Area
+1994,NFL,Dallas
+1993,NFL,Dallas
+1992,NFL,D.C.
+1991,NFL,New York City
+1990,NFL,Bay Area
+1989,NFL,Bay Area
+1988,NFL,D.C.
+1987,NFL,New York City
+1986,NFL,Chicago
+1985,NFL,Bay Area
+1984,NFL,Los Angeles
+1983,NFL,D.C.
+1982,NFL,Bay Area
+1981,NFL,Bay Area
+1980,NFL,Pittsburgh
+1979,NFL,Pittsburgh
+1978,NFL,Dallas
+1977,NFL,Bay Area
+1976,NFL,Pittsburgh
+1975,NFL,Pittsburgh
+1974,NFL,Miami
+1973,NFL,Miami
+1972,NFL,Dallas
+1971,NFL,Baltimore
+1970,NFL,Kansas City
+1969,NFL,New York City
+1968,NFL,Green Bay
+1967,NFL,Green Bay
