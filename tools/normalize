@@ -426,7 +426,7 @@ const leagues = {
     "NHL": [
         {
             "start": "Anaheim Ducks",
-            "end": "Anaheim"
+            "end": "Los Angeles"
         },
         {
             "start": "Arizona Coyotes",
