@@ -290,6 +290,268 @@ const leagues = {
             "start": "Baltimore Colts",
             "end": "Baltimore"
         }
+    ],
+
+    "MLB": [
+        {
+            "start": "Arizona Diamondbacks",
+            "end": "Arizona"
+        },
+        {
+            "start": "Atlanta Braves",
+            "end": "Atlanta"
+        },
+        {
+            "start": "Baltimore Orioles",
+            "end": "Baltimore"
+        },
+        {
+            "start": "Boston Red Sox",
+            "end": "Boston"
+        },
+        {
+            "start": "Chicago White Sox",
+            "end": "Chicago"
+        },
+        {
+            "start": "Chicago Cubs",
+            "end": "Chicago"
+        },
+        {
+            "start": "Cincinnati Reds",
+            "end": "Cincinnati"
+        },
+        {
+            "start": "Cleveland Guardians",
+            "end": "Cleveland"
+        },
+        {
+            "start": "Colorado Rockies",
+            "end": "Denver"
+        },
+        {
+            "start": "Detroit Tigers",
+            "end": "Detroit"
+        },
+        {
+            "start": "Houston Astros",
+            "end": "Houston"
+        },
+        {
+            "start": "Kansas City Royals",
+            "end": "Kansas City"
+        },
+        {
+            "start": "Los Angeles Angels",
+            "end": "Los Angeles"
+        },
+        {
+            "start": "Los Angeles Dodgers",
+            "end": "Los Angeles"
+        },
+        {
+            "start": "Miami Marlins",
+            "end": "Miami"
+        },
+        {
+            "start": "Milwaukee Brewers",
+            "end": "Milwaukee"
+        },
+        {
+            "start": "Minnesota Twins",
+            "end": "Minnesota"
+        },
+        {
+            "start": "New York Yankees",
+            "end": "New York City"
+        },
+        {
+            "start": "New York Mets",
+            "end": "New York City"
+        },
+        {
+            "start": "Oakland Athletics",
+            "end": "Bay Area"
+        },
+        {
+            "start": "Philadelphia Phillies",
+            "end": "Philadelphia"
+        },
+        {
+            "start": "Pittsburgh Pirates",
+            "end": "Pittsburgh"
+        },
+        {
+            "start": "San Diego Padres",
+            "end": "San Diego"
+        },
+        {
+            "start": "San Francisco Giants",
+            "end": "Bay Area"
+        },
+        {
+            "start": "Seattle Mariners",
+            "end": "Seattle"
+        },
+        {
+            "start": "St. Louis Cardinals",
+            "end": "St. Louis"
+        },
+        {
+            "start": "Tampa Bay Rays",
+            "end": "Tampa Bay"
+        },
+        {
+            "start": "Texas Rangers",
+            "end": "Dallas"
+        },
+        {
+            "start": "Toronto Blue Jays",
+            "end": "Toronto"
+        },
+        {
+            "start": "Washington Nationals",
+            "end": "D.C."
+        },
+        {
+            "start": "Philadelphia Athletics",
+            "end": "Philadelphia"
+        },
+        {
+            "start": "New York Giants",
+            "end": "New York City"
+        }
+    ],
+    
+    "NHL": [
+        {
+            "start": "Anaheim Ducks",
+            "end": "Anaheim"
+        },
+        {
+            "start": "Arizona Coyotes",
+            "end": "Arizona"
+        },
+        {
+            "start": "Boston Bruins",
+            "end": "Boston"
+        },
+        {
+            "start": "Buffalo Sabres",
+            "end": "Buffalo"
+        },
+        {
+            "start": "Calgary Flames",
+            "end": "Calgary"
+        },
+        {
+            "start": "Carolina Hurricanes",
+            "end": "Carolina"
+        },
+        {
+            "start": "Chicago Blackhawks",
+            "end": "Chicago"
+        },
+        {
+            "start": "Colorado Avalanche",
+            "end": "Denver"
+        },
+        {
+            "start": "Columbus Blue Jackets",
+            "end": "Columbus"
+        },
+        {
+            "start": "Dallas Stars",
+            "end": "Dallas"
+        },
+        {
+            "start": "Detroit Red Wings",
+            "end": "Detroit"
+        },
+        {
+            "start": "Edmonton Oilers",
+            "end": "Edmonton"
+        },
+        {
+            "start": "Florida Panthers",
+            "end": "Florida"
+        },
+        {
+            "start": "Los Angeles Kings",
+            "end": "Los Angeles"
+        },
+        {
+            "start": "Minnesota Wild",
+            "end": "Minnesota"
+        },
+        {
+            "start": "Montreal Canadiens",
+            "end": "Montreal"
+        },
+        {
+            "start": "Nashville Predators",
+            "end": "Nashville"
+        },
+        {
+            "start": "New Jersey Devils",
+            "end": "New Jersey"
+        },
+        {
+            "start": "New York Islanders",
+            "end": "New York City"
+        },
+        {
+            "start": "New York Rangers",
+            "end": "New York City"
+        },
+        {
+            "start": "Ottawa Senators",
+            "end": "Ottawa"
+        },
+        {
+            "start": "Philadelphia Flyers",
+            "end": "Philadelphia"
+        },
+        {
+            "start": "Pittsburgh Penguins",
+            "end": "Pittsburgh"
+        },
+        {
+            "start": "San Jose Sharks",
+            "end": "San Jose"
+        },
+        {
+            "start": "Seattle Kraken",
+            "end": "Seattle"
+        },
+        {
+            "start": "St. Louis Blues",
+            "end": "St. Louis"
+        },
+        {
+            "start": "Tampa Bay Lightning",
+            "end": "Tampa Bay"
+        },
+        {
+            "start": "Toronto Maple Leafs",
+            "end": "Toronto"
+        },
+        {
+            "start": "Vancouver Canucks",
+            "end": "Vancouver"
+        },
+        {
+            "start": "Vegas Golden Knights",
+            "end": "Las Vegas"
+        },
+        {
+            "start": "Washington Capitals",
+            "end": "D.C."
+        },
+        {
+            "start": "Winnipeg Jets",
+            "end": "Winnipeg"
+        }
     ]
 }
 
