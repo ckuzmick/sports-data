@@ -3,6 +3,8 @@
 const fs = require('fs');
 const Papa = require('papaparse');
 const _ = require('lodash');
+const yargs = require('yargs/yargs')(process.argv.slice(2)).argv;
+const fill = require('../tools/fill-csv');
 
 function main(district, towns, file, refFile) {
     const csv = fs.readFileSync(file, 'utf8');
@@ -13,13 +15,40 @@ function main(district, towns, file, refFile) {
 
     const townsArray = JSON.parse(towns);
 
-    for (const town of townsArray) {
-        const townObj = refData.find(row => row["TOWN"] === town);
-        const townData = data.find(row => row["TOWN"] === town);
+    var PCIAvg = 0;
+    var PCIAvgWeight = 0;
+    var MHIAvg = 0;
+    var MHIAvgWeight = 0;
+    var MFIAvg = 0;
+    var MFIAvgWeight = 0;
+    var Households = 0;
+    var Population = 0;
 
-        townData["DISTRICT"] = townObj["DISTRICT"];
+    for (const town of townsArray) {
+        const townObj = refData.find(row => row['District'] === town);
+        PCIAvg += _.toInteger(townObj['Per capita income']) * _.toInteger(townObj['Population']);
+        PCIAvgWeight += _.toInteger(townObj['Population']);
+        MHIAvg += _.toInteger(townObj['Median household income']) * _.toInteger(townObj['Households']);
+        MHIAvgWeight += _.toInteger(townObj['Households']);
+        MFIAvg += _.toInteger(townObj['Median family income']) * _.toInteger(townObj['Households']);
+        MFIAvgWeight += _.toInteger(townObj['Households']);
+        Households += _.toInteger(townObj['Households']);
+        Population += _.toInteger(townObj['Population']);
     }
+
+    PCIAvg /= PCIAvgWeight;
+    MHIAvg /= MHIAvgWeight;
+    MFIAvg /= MFIAvgWeight;
+
+    data.find(row => row['District'] === district)['Per capita income'] = Math.round(PCIAvg);
+    data.find(row => row['District'] === district)['Median household income'] = Math.round(MHIAvg);
+    data.find(row => row['District'] === district)['Median family income'] = Math.round(MFIAvg);
+    data.find(row => row['District'] === district)['Households'] = Households;
+    data.find(row => row['District'] === district)['Population'] = Population;
+    data.find(row => row['District'] === district)['Rank'] = "NA";
 
     const finalCsv = Papa.unparse(data);
     fs.writeFileSync(file, finalCsv);
 }
+
+main(yargs.d, yargs.t, yargs.f, yargs.r);
