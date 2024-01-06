@@ -1,0 +1,39 @@
+#!/usr/bin/env node
+
+const fs = require('fs');
+const Papa = require('papaparse');
+const _ = require('lodash');
+
+function averageTowns(numKey, path, townsKey, towns, valueKey) {
+    const csv1 = fs.readFileSync(path, 'utf8');
+
+    const data1 = Papa.parse(csv1, { header: true }).data;
+
+    var mergedData = 0;
+    var totalWeight = 0;
+
+    const arrayOfTowns = JSON.parse(towns);
+
+    arrayOfTowns.forEach(town => {
+        townObj = data1.find(row => row[townsKey] === town);
+        console.log(townObj);
+        totalWeight += _.toInteger(townObj[numKey]);
+        mergedData += _.toInteger(townObj[valueKey]) * _.toInteger(townObj[numKey]);
+    });
+
+    const average = mergedData / totalWeight;
+    console.log(mergedData, totalWeight, average);
+}
+
+if (process.argv.length !== 7) {
+    console.log("ERROR: wrong number of arguments");
+    process.exit(1);
+}
+
+const numKeyColumn = process.argv[2];
+const townsKeyColumn = process.argv[3];
+const valueKeyColumn = process.argv[6];
+const townsArray = process.argv[4];
+const file1 = process.argv[5];
+
+averageTowns(numKeyColumn, file1, townsKeyColumn, townsArray, valueKeyColumn);

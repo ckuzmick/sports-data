@@ -1,0 +1,25 @@
+#!/usr/bin/env node
+
+const fs = require('fs');
+const Papa = require('papaparse');
+const _ = require('lodash');
+
+function main(district, towns, file, refFile) {
+    const csv = fs.readFileSync(file, 'utf8');
+    var data = Papa.parse(csv, { header: true }).data;
+
+    const refCsv = fs.readFileSync(refFile, 'utf8');
+    const refData = Papa.parse(refCsv, { header: true }).data;
+
+    const townsArray = JSON.parse(towns);
+
+    for (const town of townsArray) {
+        const townObj = refData.find(row => row["TOWN"] === town);
+        const townData = data.find(row => row["TOWN"] === town);
+
+        townData["DISTRICT"] = townObj["DISTRICT"];
+    }
+
+    const finalCsv = Papa.unparse(data);
+    fs.writeFileSync(file, finalCsv);
+}

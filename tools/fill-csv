@@ -1,0 +1,17 @@
+#!/usr/bin/env node
+
+const fs = require('fs');
+const Papa = require('papaparse');
+const _ = require('lodash');
+
+function fillCsvWithAverage(keyColumn, key, file, fillData, fillColumn) {
+    const csv = fs.readFileSync(file, 'utf8');
+
+    const data = Papa.parse(csv, { header: true }).data;
+
+    data.find(row => row[keyColumn] === key)[fillColumn] = fillData;
+
+    const mergedCSV = Papa.unparse(mergedData);
+    fs.writeFileSync(file, mergedCSV);
+    console.log(`${file} filled with ${fillData} in column ${fillColumn} where ${keyColumn} is ${key}`);
+}

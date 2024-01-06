@@ -11,11 +11,22 @@ function mergeCSV(key, path1, path2, pathOutput) {
     const data1 = Papa.parse(csv1, { header: true }).data;
     const data2 = Papa.parse(csv2, { header: true }).data;
 
-    const mergedData = _.mergeWith(data1, data2, (objValue, srcValue) => {
-        if (_.isArray(objValue)) {
-            return objValue.concat(srcValue);
+    var mergedData = [];
+
+    for (const row of data1) {
+        var workingRow = row;
+
+        for (const row2 of data2) {
+            if (row[key] === row2[key]) {
+                workingRow = _.merge(row, row2);
+                break;
+            }
         }
-    });
+
+        console.log(workingRow);
+
+        mergedData.push(workingRow);
+    }
 
     const mergedCSV = Papa.unparse(mergedData);
     fs.writeFileSync(pathOutput, mergedCSV);
